@@ -43,3 +43,6 @@ bash /tmp/NVIDIA-Linux-x86_64.run --no-x-check --dkms;
 
 # Check Work
 /usr/bin/nvidia-smi;
+
+# Fix for Wine alt+tab hang
+# wine reg add 'HKEY_CURRENT_USER\Software\Wine\X11 Driver' /t REG_SZ /v UseTakeFocus /d N /f
